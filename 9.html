@@ -1,0 +1,8 @@
+app.get('/error', (req, res) => {
+  throw new Error('Something went wrong!');
+});
+
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send('Something broke!');
+});
