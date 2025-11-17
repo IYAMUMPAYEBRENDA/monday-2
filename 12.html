@@ -1,0 +1,7 @@
+app.get('/old-route', (req, res) => {
+  res.redirect('/new-route');
+});
+
+app.get('/new-route', (req, res) => {
+  res.send('This is the new route');
+});
