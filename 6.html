@@ -1,0 +1,6 @@
+app.use(express.json());
+
+app.post('/api/users', (req, res) => {
+  const { name, email } = req.body;
+  res.json({ message: 'User created', user: { name, email } });
+});
