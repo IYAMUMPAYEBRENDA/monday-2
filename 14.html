@@ -1,0 +1,4 @@
+app.route('/books')
+  .get((req, res) => res.send('Get all books'))
+  .post((req, res) => res.send('Add a book'))
+  .put((req, res) => res.send('Update all books'));
