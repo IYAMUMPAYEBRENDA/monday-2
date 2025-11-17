@@ -1,0 +1,4 @@
+app.get('/search', (req, res) => {
+  const { q, sort } = req.query;
+  res.send(`Searching for: ${q}, sorted by: ${sort}`);
+});
